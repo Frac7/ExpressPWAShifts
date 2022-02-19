@@ -9,8 +9,6 @@ const cache = require('../cache');
 const initNotificationJob = () => {
   // Running a task every day
   cron.schedule('0 1 * * *', async () => {
-    const subscription = '';
-
     const dayOfTheWeek = new Date(date).getDay();
 
     const trash = trashItems[dayOfTheWeek];
