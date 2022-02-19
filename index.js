@@ -1,7 +1,7 @@
 require('dotenv').config();
 const webPush = require('web-push');
 
-// Generate public and private keys for PWA subscription
+// Important: Generate public and private keys for the PWA subscription before running this statement
 webPush.setVapidDetails(
   'https://serviceworke.rs/',
   process.env.VAPID_PUBLIC_KEY,
