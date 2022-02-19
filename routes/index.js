@@ -11,4 +11,14 @@ const getShift = (req, res) => {
   res.json({ trash, street });
 };
 
-module.exports = { getShift };
+const getPublicKey = (_, res) => {
+  res.json({ publicKey: process.env.VAPID_PUBLIC_KEY });
+};
+
+const postSubscription = (req, res) => {
+  const { subscription } = req.body;
+  // TODO: store information
+  res.sendStatus(200);
+};
+
+module.exports = { getShift, getPublicKey, postSubscription };
