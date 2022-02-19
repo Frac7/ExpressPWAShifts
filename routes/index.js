@@ -1,6 +1,8 @@
 const data = require('../data');
 const { trash: trashItems, street: streetItems } = data;
 
+const cache = require('../cache');
+
 const getShift = (req, res) => {
   const { date } = req.query;
   const dayOfTheWeek = new Date(date).getDay();
@@ -17,7 +19,7 @@ const getPublicKey = (_, res) => {
 
 const postSubscription = (req, res) => {
   const { subscription } = req.body;
-  // TODO: store information
+  cache.push(subscription);
   res.sendStatus(200);
 };
 
