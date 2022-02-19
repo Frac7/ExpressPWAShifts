@@ -19,7 +19,7 @@ const initNotificationJob = () => {
     const payload = JSON.stringify({ trash, street }); // TODO: check if this API accepts JSON
     const ttl = 60 * 60 * 24;
 
-    cache.forEach(() =>
+    cache.forEach((subscription) =>
       webPush.sendNotification(subscription, payload, { ttl }),
     );
   });
