@@ -15,10 +15,10 @@ const initNotificationJob = () => {
     const street = streetItems[dayOfTheWeek];
 
     const payload = JSON.stringify({ trash, street }); // TODO: check if this API accepts JSON
-    const ttl = 60 * 60 * 24;
+    const TTL = 60 * 60 * 24;
 
     cache.forEach((subscription) =>
-      webPush.sendNotification(subscription, payload, { ttl }),
+      webPush.sendNotification(subscription, payload, { TTL }),
     );
   });
 };
