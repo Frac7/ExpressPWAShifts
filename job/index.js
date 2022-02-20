@@ -14,7 +14,7 @@ const initNotificationJob = () => {
     const trash = trashItems[dayOfTheWeek];
     const street = streetItems[dayOfTheWeek];
 
-    const payload = JSON.stringify({ trash, street }); // TODO: check if this API accepts JSON
+    const payload = JSON.stringify({ trash, street });
     const TTL = 60 * 60 * 24;
 
     cache.forEach((subscription) =>
