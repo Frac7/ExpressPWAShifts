@@ -19,7 +19,9 @@ const getPublicKey = (_, res) => {
 
 const postSubscription = (req, res) => {
   const { subscription } = req.body;
-  cache.push(subscription);
+  if (!cache.getSubscriptionByEndpoint(subscription.endpoint)) {
+    cache.subscriptions.push(subscription);
+  }
   res.sendStatus(200);
 };
 

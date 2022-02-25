@@ -17,7 +17,7 @@ const initNotificationJob = () => {
     const payload = JSON.stringify({ trash, street });
     const TTL = 60 * 60 * 24;
 
-    cache.forEach((subscription) =>
+    cache.subscriptions.forEach((subscription) =>
       webPush.sendNotification(subscription, payload, { TTL }),
     );
   });
