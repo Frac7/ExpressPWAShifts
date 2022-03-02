@@ -1,5 +1,6 @@
 # ExpressPWAShifts
-Basic PoC to show how to notify (push) a subscriber PWA
+Basic PoC to show how to notify (push) a subscriber PWA.
+This example is based on [this resource.](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps/Re-engageable_Notifications_Push)
 
 # Overview
 This project was created with:
