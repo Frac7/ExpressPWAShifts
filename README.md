@@ -18,7 +18,7 @@ A scheduled job runs every day at 8:00 am - the server sends a notification for 
 ## Get the turns
 The last endpoint exposed by this application is `GET /`, which returns shifts for a certain date. Shifts are mocked within the application.
 
-# To start
+# Getting started
 Generate VAPID keys and save them in the .env file using `webPush.generateVAPIDKeys ()`. `webPush` derives from the` web-push` package. See [Push](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps/Re-engageable_Notifications_Push#push).
 
 Run the following command: `yarn install && yarn start`
